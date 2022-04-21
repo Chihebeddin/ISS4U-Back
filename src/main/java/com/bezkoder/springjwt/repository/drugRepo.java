@@ -8,8 +8,8 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface drugRepo extends JpaRepository<drug,Long> {
-    @Query(value="select m.name from drug m where m.name like %:keyword%")
+    /*@Query(value="select m.name from drug m where m.name like %:keyword%")
     List<String> findName(@Param("keyword") String keyword);
     @Query(value="select m from drug m where m.name like %:keyword%")
-    List<drug> findDrug (@Param("keyword") String keyword);
+    List<drug> findDrug (@Param("keyword") String keyword);*/
 }

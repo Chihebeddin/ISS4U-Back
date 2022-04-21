@@ -1,18 +1,18 @@
 package com.bezkoder.springjwt.service;
 
-
 import com.bezkoder.springjwt.models.Prscrptn;
-import com.bezkoder.springjwt.repository.prescriptionRepo;
+import com.bezkoder.springjwt.repository.PrscrptnRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
 @Service
-public class prescriptionServiceImp implements prescriptionService{
+public class PrscrptnImp implements PrscrptnService{
+
     @Autowired
-    private prescriptionRepo repo;
+    private PrscrptnRepo repo;
+
     @Override
     public Prscrptn savePrescription(Prscrptn pres) {
         return repo.save(pres);
@@ -25,8 +25,8 @@ public class prescriptionServiceImp implements prescriptionService{
 
     @Override
     public Long DeletePrescription(Long id) {
-         repo.deleteById(id);
-         return id;
+        repo.deleteById(id);
+        return id;
     }
 
     @Override
@@ -37,16 +37,6 @@ public class prescriptionServiceImp implements prescriptionService{
     @Override
     public List<Prscrptn> getPrescriptions() {
         return repo.findAll();
-    }
-
-    @Override
-    public List<String> findDrugByname(String keyword) {
-        return repo.findDrugByName(keyword);
-    }
-
-    @Override
-    public List<String> findTreatmentByname(String keyword) {
-        return repo.findTreatmentByName(keyword);
     }
 
 

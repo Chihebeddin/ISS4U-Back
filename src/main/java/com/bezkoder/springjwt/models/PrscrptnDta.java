@@ -14,7 +14,7 @@ public class PrscrptnDta {
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long PrscrptnDta_Ky;
 
-    @OneToOne(mappedBy = "prscrptnDta")
+    @OneToOne(cascade = CascadeType.ALL)
     private Prscrptn PrscrptnDta_PrntPrscrptn;
     private int PrscrptnDta_Frq ;
     private String PrscrptnDta_PrdUnit;
@@ -22,20 +22,6 @@ public class PrscrptnDta {
     private Date PrscrptnDta_UnxTmBgn;
     @Temporal(TemporalType.TIMESTAMP)
     private Date PrscrptnDta_UnxTmEnd;
-
-   /* @ManyToMany
-    @JoinTable(
-            name = "dr_drInv",
-            joinColumns = @JoinColumn(name = "drugs"),
-            inverseJoinColumns = @JoinColumn(name = "drugInventories"))
-    private List<drug> drugs;*/
-
-
-
-
-
-    public PrscrptnDta() {
-    }
 
     public Long getPrscrptnDta_Ky() {
         return PrscrptnDta_Ky;
@@ -83,6 +69,9 @@ public class PrscrptnDta {
 
     public void setPrscrptnDta_UnxTmEnd(Date prscrptnDta_UnxTmEnd) {
         PrscrptnDta_UnxTmEnd = prscrptnDta_UnxTmEnd;
+    }
+
+    public PrscrptnDta() {
     }
 
     public PrscrptnDta(Long prscrptnDta_Ky, Prscrptn prscrptnDta_PrntPrscrptn, int prscrptnDta_Frq, String prscrptnDta_PrdUnit, Date prscrptnDta_UnxTmBgn, Date prscrptnDta_UnxTmEnd) {

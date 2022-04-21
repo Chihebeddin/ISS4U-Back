@@ -19,23 +19,8 @@ public class examSchdld {
     @Temporal(TemporalType.TIMESTAMP)
     private Date ExamSchdld_UnxTmEnd;
 
-    @OneToMany
-    @JoinColumn(name = "Prscrptn_PrntExamSchdld")
+    @OneToMany(cascade=CascadeType.MERGE, mappedBy = "Prscrptn_DrgPrntKy")
     private List<Prscrptn> prscrptns;
-
-    public examSchdld() {
-    }
-
-    public examSchdld(int examSchdld_Ky, Ptnt examSchdld_PrntKy, String examSchdld_Nm, int examSchdld_PrntRfrnt, int examSchdld_PrntRm, Date examSchdld_UnxTmBgn, Date examSchdld_UnxTmEnd, List<Prscrptn> prscrptns) {
-        ExamSchdld_Ky = examSchdld_Ky;
-        ExamSchdld_PrntKy = examSchdld_PrntKy;
-        ExamSchdld_Nm = examSchdld_Nm;
-        ExamSchdld_PrntRfrnt = examSchdld_PrntRfrnt;
-        ExamSchdld_PrntRm = examSchdld_PrntRm;
-        ExamSchdld_UnxTmBgn = examSchdld_UnxTmBgn;
-        ExamSchdld_UnxTmEnd = examSchdld_UnxTmEnd;
-        this.prscrptns = prscrptns;
-    }
 
     public int getExamSchdld_Ky() {
         return ExamSchdld_Ky;
@@ -98,6 +83,20 @@ public class examSchdld {
     }
 
     public void setPrscrptns(List<Prscrptn> prscrptns) {
+        this.prscrptns = prscrptns;
+    }
+
+    public examSchdld() {
+    }
+
+    public examSchdld(int examSchdld_Ky, Ptnt examSchdld_PrntKy, String examSchdld_Nm, int examSchdld_PrntRfrnt, int examSchdld_PrntRm, Date examSchdld_UnxTmBgn, Date examSchdld_UnxTmEnd, List<Prscrptn> prscrptns) {
+        ExamSchdld_Ky = examSchdld_Ky;
+        ExamSchdld_PrntKy = examSchdld_PrntKy;
+        ExamSchdld_Nm = examSchdld_Nm;
+        ExamSchdld_PrntRfrnt = examSchdld_PrntRfrnt;
+        ExamSchdld_PrntRm = examSchdld_PrntRm;
+        ExamSchdld_UnxTmBgn = examSchdld_UnxTmBgn;
+        ExamSchdld_UnxTmEnd = examSchdld_UnxTmEnd;
         this.prscrptns = prscrptns;
     }
 }

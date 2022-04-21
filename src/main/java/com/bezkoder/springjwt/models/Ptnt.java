@@ -60,67 +60,6 @@ public class Ptnt implements Serializable {
     @JoinColumn(name="ExamSchdld_PrntKy")
     private List<examSchdld> examSchdlds;
 
-    public Ptnt() {
-    }
-
-    public List<examSchdld> getExamSchdlds() {
-        return examSchdlds;
-    }
-
-    public void setExamSchdlds(List<examSchdld> examSchdlds) {
-        this.examSchdlds = examSchdlds;
-    }
-
-    public Ptnt(Long ptnt_Ky, String ptnt_ExtrnlKy, String ptnt_Nm, String ptnt_FrstNm, String ptnt_MdlNm, int ptnt_CvlSts, Date ptnt_BrthDt, int ptnt_Sx, String ptnt_IdnttyNmbr, int ptnt_IdnttyTp, int ptnt_Ntnlty, Date ptnt_DthDt, String ptnt_DthRmrqs, int ptnt_Sz, int ptnt_Wght, String ptnt_Rmrqs, int ptnt_Sts, List<DmgrphcAddrss> dmgrphcAddrss, List<DmgrphcEml> dmgrphcEml, List<DmgrphcPhn> dmgrphcPhn, Date ptnt_UnxTmCrt, Date ptnt_UnxTmUpdt, int ptnt_RcrdSts, List<examSchdld> examSchdlds) {
-        Ptnt_Ky = ptnt_Ky;
-        Ptnt_ExtrnlKy = ptnt_ExtrnlKy;
-        Ptnt_Nm = ptnt_Nm;
-        Ptnt_FrstNm = ptnt_FrstNm;
-        Ptnt_MdlNm = ptnt_MdlNm;
-        Ptnt_CvlSts = ptnt_CvlSts;
-        Ptnt_BrthDt = ptnt_BrthDt;
-        Ptnt_Sx = ptnt_Sx;
-        Ptnt_IdnttyNmbr = ptnt_IdnttyNmbr;
-        Ptnt_IdnttyTp = ptnt_IdnttyTp;
-        Ptnt_Ntnlty = ptnt_Ntnlty;
-        Ptnt_DthDt = ptnt_DthDt;
-        Ptnt_DthRmrqs = ptnt_DthRmrqs;
-        Ptnt_Sz = ptnt_Sz;
-        Ptnt_Wght = ptnt_Wght;
-        Ptnt_Rmrqs = ptnt_Rmrqs;
-        Ptnt_Sts = ptnt_Sts;
-        this.dmgrphcAddrss = dmgrphcAddrss;
-        this.dmgrphcEml = dmgrphcEml;
-        this.dmgrphcPhn = dmgrphcPhn;
-        Ptnt_UnxTmCrt = ptnt_UnxTmCrt;
-        Ptnt_UnxTmUpdt = ptnt_UnxTmUpdt;
-        Ptnt_RcrdSts = ptnt_RcrdSts;
-        this.examSchdlds = examSchdlds;
-    }
-
-    public List<DmgrphcAddrss> getDmgrphcAddrss() {
-        return dmgrphcAddrss;
-    }
-
-    public void setDmgrphcAddrss(List<DmgrphcAddrss> dmgrphcAddrss) {
-        this.dmgrphcAddrss = dmgrphcAddrss;
-    }
-
-    public List<DmgrphcEml> getDmgrphcEml() {
-        return dmgrphcEml;
-    }
-
-    public void setDmgrphcEml(List<DmgrphcEml> dmgrphcEml) {
-        this.dmgrphcEml = dmgrphcEml;
-    }
-
-    public List<DmgrphcPhn> getDmgrphcPhn() {
-        return dmgrphcPhn;
-    }
-
-    public void setDmgrphcPhn(List<DmgrphcPhn> dmgrphcPhn) {
-        this.dmgrphcPhn = dmgrphcPhn;
-    }
 
     public Long getPtnt_Ky() {
         return Ptnt_Ky;
@@ -258,6 +197,30 @@ public class Ptnt implements Serializable {
         Ptnt_Sts = ptnt_Sts;
     }
 
+    public List<DmgrphcAddrss> getDmgrphcAddrss() {
+        return dmgrphcAddrss;
+    }
+
+    public void setDmgrphcAddrss(List<DmgrphcAddrss> dmgrphcAddrss) {
+        this.dmgrphcAddrss = dmgrphcAddrss;
+    }
+
+    public List<DmgrphcEml> getDmgrphcEml() {
+        return dmgrphcEml;
+    }
+
+    public void setDmgrphcEml(List<DmgrphcEml> dmgrphcEml) {
+        this.dmgrphcEml = dmgrphcEml;
+    }
+
+    public List<DmgrphcPhn> getDmgrphcPhn() {
+        return dmgrphcPhn;
+    }
+
+    public void setDmgrphcPhn(List<DmgrphcPhn> dmgrphcPhn) {
+        this.dmgrphcPhn = dmgrphcPhn;
+    }
+
     public Date getPtnt_UnxTmCrt() {
         return Ptnt_UnxTmCrt;
     }
@@ -280,6 +243,44 @@ public class Ptnt implements Serializable {
 
     public void setPtnt_RcrdSts(int ptnt_RcrdSts) {
         Ptnt_RcrdSts = ptnt_RcrdSts;
+    }
+
+    public List<examSchdld> getExamSchdlds() {
+        return examSchdlds;
+    }
+
+    public void setExamSchdlds(List<examSchdld> examSchdlds) {
+        this.examSchdlds = examSchdlds;
+    }
+
+    public Ptnt() {
+   }
+
+    public Ptnt(Long ptnt_Ky, String ptnt_ExtrnlKy, String ptnt_Nm, String ptnt_FrstNm, String ptnt_MdlNm, int ptnt_CvlSts, Date ptnt_BrthDt, int ptnt_Sx, String ptnt_IdnttyNmbr, int ptnt_IdnttyTp, int ptnt_Ntnlty, Date ptnt_DthDt, String ptnt_DthRmrqs, int ptnt_Sz, int ptnt_Wght, String ptnt_Rmrqs, int ptnt_Sts, List<DmgrphcAddrss> dmgrphcAddrss, List<DmgrphcEml> dmgrphcEml, List<DmgrphcPhn> dmgrphcPhn, Date ptnt_UnxTmCrt, Date ptnt_UnxTmUpdt, int ptnt_RcrdSts, List<examSchdld> examSchdlds) {
+        Ptnt_Ky = ptnt_Ky;
+        Ptnt_ExtrnlKy = ptnt_ExtrnlKy;
+        Ptnt_Nm = ptnt_Nm;
+        Ptnt_FrstNm = ptnt_FrstNm;
+        Ptnt_MdlNm = ptnt_MdlNm;
+        Ptnt_CvlSts = ptnt_CvlSts;
+        Ptnt_BrthDt = ptnt_BrthDt;
+        Ptnt_Sx = ptnt_Sx;
+        Ptnt_IdnttyNmbr = ptnt_IdnttyNmbr;
+        Ptnt_IdnttyTp = ptnt_IdnttyTp;
+        Ptnt_Ntnlty = ptnt_Ntnlty;
+        Ptnt_DthDt = ptnt_DthDt;
+        Ptnt_DthRmrqs = ptnt_DthRmrqs;
+        Ptnt_Sz = ptnt_Sz;
+        Ptnt_Wght = ptnt_Wght;
+        Ptnt_Rmrqs = ptnt_Rmrqs;
+        Ptnt_Sts = ptnt_Sts;
+        this.dmgrphcAddrss = dmgrphcAddrss;
+        this.dmgrphcEml = dmgrphcEml;
+        this.dmgrphcPhn = dmgrphcPhn;
+        Ptnt_UnxTmCrt = ptnt_UnxTmCrt;
+        Ptnt_UnxTmUpdt = ptnt_UnxTmUpdt;
+        Ptnt_RcrdSts = ptnt_RcrdSts;
+        this.examSchdlds = examSchdlds;
     }
 }
 
